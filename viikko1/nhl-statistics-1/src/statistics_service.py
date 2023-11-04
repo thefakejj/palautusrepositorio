@@ -1,7 +1,3 @@
-def sort_by_points(player):
-    return player.points
-
-
 class StatisticsService:
     def __init__(self, reader: object):
         self._players = reader.get_players()
@@ -22,6 +18,9 @@ class StatisticsService:
         return list(players_of_team)
 
     def top(self, how_many):
+        def sort_by_points(player):
+            return player.points
+
         sorted_players = sorted(
             self._players,
             reverse=True,
