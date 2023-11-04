@@ -1,3 +1,3 @@
-# Ohjelmistotuotanto
+# Ohtu s23 palautukset
 
-[Ohjelmistotuotanto](https://ohjelmistotuotanto-hy.github.io/)-kurssin laskareissa käytettävä Python-koodi.
+https://github.com/thefakejj/ohtuvarasto
