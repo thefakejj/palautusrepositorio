@@ -9,4 +9,4 @@ class Player:
         self.games = dict['games']
 
     def __str__(self):
-        return self.name
+        return f"{self.name} team {self.team}  goals {self.goals} assists {self.assists}"
