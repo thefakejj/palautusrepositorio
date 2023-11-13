@@ -14,14 +14,15 @@ def main():
         player = Player(player_dict)
         players.append(player)
 
-    print("PLAYERS FROM FIN:")
-    # for player in players:
-    #     print(player)
-
     # Finnish players
+    print("PLAYERS FROM FIN:")
     for player in players:
         if player.nationality == 'FIN':
             print(player)
+
+
+    # for player in players:
+    #     print(player)
 
 if __name__ == "__main__":
     main()
