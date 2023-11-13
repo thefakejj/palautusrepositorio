@@ -12,15 +12,16 @@ def main():
 
     for player_dict in response:
         player = Player(player_dict)
-        if player is not None:
-            players.append(player)
-            #print(players)
-    print(players)
-    print("Oliot:")
+        players.append(player)
 
+    print("Oliot:")
     # for player in players:
     #     print(player)
-    print(players[0])
+
+    # Finnish players
+    for player in players:
+        if player.nationality == 'FIN':
+            print(player)
 
 if __name__ == "__main__":
     main()
