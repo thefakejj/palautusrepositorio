@@ -33,14 +33,35 @@ Register With Nonmatching Password And Password Confirmation
     Submit Credentials
     Register Should Fail With Message  Password and password confirmation must match
 
+Login After Failed Registration
+    Go To Login Page
+    Set Username  baller
+    Set Password  ballermoves123
+    Submit Login
+    Login Should Fail With Message  Invalid username or password
+
+Login After Successful Registration
+    Go To Login Page
+    Set Username  balle
+    Set Password  balle123
+    Submit Login
+    Login Should Succeed
+
 
 *** Keywords ***
 Register Should Succeed
     Welcome Page Should Be Open
+Login Should Succeed
+    Main Page Should Be Open
 
 Register Should Fail With Message
     [Arguments]  ${message}
     Register Page Should Be Open
+    Page Should Contain  ${message}
+
+Login Should Fail With Message
+    [Arguments]  ${message}
+    Login Page Should Be Open
     Page Should Contain  ${message}
 
 Set Username
@@ -57,6 +78,9 @@ Set Password confirmation
 
 Submit Credentials
     Click Button  Register
+
+Submit Login
+    Click Button  Login
 
 # *** Keywords ***
 # Login Should Succeed
