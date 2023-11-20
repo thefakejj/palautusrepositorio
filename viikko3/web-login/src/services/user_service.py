@@ -35,7 +35,7 @@ class UserService:
             User(username, password)
         )
 
-        return user
+        return user 
 
     def validate(self, username, password, password_confirmation):
         if not username or not password:
