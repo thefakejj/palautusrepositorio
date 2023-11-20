@@ -3,6 +3,8 @@ name: CI
 on:
   push:
     branches: [main]
+    paths:
+        - 'viikko3/web-login/**'
   pull_request:
     branches: [main]
 
