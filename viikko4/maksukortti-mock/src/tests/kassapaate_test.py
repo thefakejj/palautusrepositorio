@@ -24,15 +24,12 @@ class TestKassapaate(unittest.TestCase):
 
         maksukortti_mock.osta.assert_not_called()
 
-    # def test_kortille_ladataan_jos_positiivinen(self):
-        # maksukortti_mock = Mock()
+    def test_kortille_ladataan_jos_positiivinen(self):
+        maksukortti_mock = Mock()
 
-        # self.kassa.lataa(maksukortti_mock, 5)
+        self.kassa.lataa(maksukortti_mock, 5)
 
-        # maksukortti_mock.lataa.assert_called_with(5)
-        # print("tässä maksukortti_mock.saldo:", maksukortti_mock.saldo)
-
-        # self.assertAlmostEqual(maksukortti_mock.saldo, 5)
+        maksukortti_mock.lataa.assert_called_with(5)
 
     def test_kortille_ei_ladata_jos_negatiivinen(self):
         maksukortti_mock = Mock()
@@ -40,6 +37,3 @@ class TestKassapaate(unittest.TestCase):
         self.kassa.lataa(maksukortti_mock, -5)
 
         maksukortti_mock.lataa.assert_not_called()
-        # print("tässä maksukortti_mock.saldo:", maksukortti_mock.saldo)
-
-        #self.assertAlmostEqual(maksukortti_mock.saldo, 5)
