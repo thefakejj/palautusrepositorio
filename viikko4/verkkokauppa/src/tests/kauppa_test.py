@@ -146,7 +146,7 @@ class TestKauppa(unittest.TestCase):
         self.kauppa.poista_korista(1)
 
         self.varasto_mock.palauta_varastoon.assert_called_with(vesi)
-
+        ostoskori_mock._poista.assert_called_with(tuote)
         
         # self.varasto_mock.palauta_varastoon.side_effect = palauta_varastoon
         # self.varasto_mock
