@@ -27,3 +27,4 @@ Lopuksi tiimi äänestää mitkä asiat ovat tärkeimpiä, ja niistä keskustell
 ## Loppu 
 
 Ketterälle kehitykselle tyypillisesti näitä valmiita struktuureita voidaan soveltaa sopivin tavoin. Esimerkiksi pieni tiimin koko tai pieni projektin skaala saattaa lyhentää aikaikkunoita paljonkin. Käytettyjä työvälineitä voidaan soveltaa paljon. Tärkeintä on kuitenkin se, että retrosektiivistä on hyötyä, eli olennaisesti tiimin jäsenien mielipiteet pitäisi pystyä kommunikoimaan.
+
