@@ -2,14 +2,6 @@ from tennis_game import TennisGame
 
 
 def main():
-    """
-    Love-All
-    Fifteen-Love
-    Thirty-Love
-    Thirty-Fifteen
-    Forty-Fifteen
-    Win for player1
-    """
     game = TennisGame("player1", "player2")
 
     print(game.get_score())
