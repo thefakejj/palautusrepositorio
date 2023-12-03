@@ -20,7 +20,6 @@ class TennisGame:
         player.score()
 
     def get_score(self):
-
         if self.player1.get_score() == self.player2.get_score():
             if self.player1.get_score() >= 3:
                 score = "Deuce"
