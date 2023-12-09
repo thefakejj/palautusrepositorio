@@ -4,6 +4,9 @@ class QueryBuilder:
     def __init__(self, query_list=All()):
         self.query_list = query_list
 
+    def oneOf(self, *queries):
+        return QueryBuilder(Or(*queries))
+
     def playsIn(self, team):
         # https://en.wikipedia.org/wiki/Snake_case
         return QueryBuilder(And(self.query_list, PlaysIn(team)))

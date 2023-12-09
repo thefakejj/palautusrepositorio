@@ -8,44 +8,35 @@ def main():
     stats = Statistics(reader)
 
     query = QueryBuilder()
-    matcher = (
-      query
-      .playsIn("NYR")
-      .hasAtLeast(10, "goals")
-      .hasFewerThan(20, "goals")
-      .build()
+
+    m1 = (
+    query
+        .playsIn("PHI")
+        .hasAtLeast(10, "assists")
+        .hasFewerThan(5, "goals")
+        .build()
     )
-    # matcher = And(
-    #     HasAtLeast(5, "goals"),
-    #     HasAtLeast(20, "assists"),
-    #     PlaysIn("PHI")
-    # )
 
-    # matcher = All(
-    # )
+    m2 = (
+    query
+        .playsIn("EDM")
+        .hasAtLeast(50, "points")
+        .build()
+    )
 
-    # matcher = And(
-    # Not(HasAtLeast(2, "goals")),
-    # PlaysIn("NYR")
-    # )
-
-    # matcher = And(
-    # HasFewerThan(2, "goals"),
-    # PlaysIn("NYR")
-    # )
+    matcher = query.oneOf(m1, m2).build()
 
     # matcher = Or(
     # HasAtLeast(45, "goals"),
     # HasAtLeast(70, "assists")
     # )
 
-    # matcher = And(
-    # HasAtLeast(70, "points"),
-    # Or(
-    #     PlaysIn("NYR"),
-    #     PlaysIn("FLA"),
-    #     PlaysIn("BOS")
-    # )
+    # matcher = (
+    #   query
+    #   .playsIn("NYR")
+    #   .hasAtLeast(10, "goals")
+    #   .hasFewerThan(20, "goals")
+    #   .build()
     # )
 
     for player in stats.matches(matcher):
