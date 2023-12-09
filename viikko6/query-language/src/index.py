@@ -12,13 +12,14 @@ def main():
     #     HasAtLeast(20, "assists"),
     #     PlaysIn("PHI")
     # )
-    matcher = All(
-    )
 
-    # matcher = And(
-    # Not(HasAtLeast(2, "goals")),
-    # PlaysIn("NYR")
+    # matcher = All(
     # )
+
+    matcher = And(
+    Not(HasAtLeast(2, "goals")),
+    PlaysIn("NYR")
+    )
 
     for player in stats.matches(matcher):
         print(player)
