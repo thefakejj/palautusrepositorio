@@ -17,7 +17,7 @@ def main():
 
         vastauksen_loppu = vastaus[-1]
 
-        if vastaus[-1] in ["a", "b", "c"]:
+        if vastauksen_loppu in ("a", "b", "c"):
             print(
                 "Peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s"
             )
