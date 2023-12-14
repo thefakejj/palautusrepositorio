@@ -1,5 +1,6 @@
-from tekoaly import Tekoaly
 from kps import KiviPaperiSakset
+from tekoaly import Tekoaly
+
 
 class KPSTekoaly(KiviPaperiSakset):
     def __init__(self):
